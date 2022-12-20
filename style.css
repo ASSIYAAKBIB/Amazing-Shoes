@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+h1,h2,h3,p{
+    margin: 0;
+}
+section{
+    padding: 7em 0;
+}
+
+.container{
+    width: 85%;
+    margin:   0 auto ;
+    max-width: 65em;
+}
+
+  .split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .split > * {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    min-width: 15em;
+  }
+.sapcing>*+* {
+    margin-top:var(--spacer,2rem) ;
+}
+
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1.25em;
+    background-color: var(--clr-accent, blue);
+    color: var(--clr-text,white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    border-radius: .25em;
+    transition:transform 250ms ease-in-out,opacity 175ms linear;
+}
+.btn:hover,
+.btn:focus{
+    transform: scale(1.1);
+    opacity: .9;
+}
+ .featured-item:hover .feuter-details,
+ .featured-item:focus.feuter-details{
+    opacity: 1;
+    text-shadow: 0 0 1em rgba(#fff, 1);
+}
+         
+
+
+
+.praimery-title{
+    font-size: 4rem;
+    font-size: clamp(3rem,calc(5vw+1rem,4.5rem));
+    line-height: 1;
+    text-transform: uppercase;
+
+}
+/*start section */
+.section-title{
+    text-align: center;
+    font-size: clamp(2.5rem,calc(5vw + 1rem),4em);/*important for resisizen page   */
+    line-height: 1;
+    color: #2193b0;
+    margin-bottom: 5rem;
+    text-shadow:  #2193b0 1px 0 10px;
+   
+}
+.hero{
+    color: white;
+    text-align: center;
+    padding: 15em 0;
+    background-image: url(shoe-3.png),radial-gradient(#4444, #111);
+   /* background-size:10% ;*/
+   background-blend-mode: multiply;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: center center;
+
+}
+.featured {
+    background:#eee;
+    
+}
+.featured .featured-item {
+    display: block;
+    position: relative;
+    transform: scale(.95);
+    transition: transform  250ms ease-in-out;
+    margin: 10px 10px;
+    text-decoration: none;
+    text-align:center ;
+    color: #143e49;
+    line-height: 1.2;
+}
+span{
+    display: block;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.featured .featured-item:hover,
+.featured .featured-item:focus{
+    transform: scale(1.1);
+}
+   
+.featured .featured-item:after{
+    content: '';
+    position: absolute;
+    padding: 75%  75% 0 0;
+    background:#2193b0;
+    border-radius: 50%;
+    top: 10%;
+    left: 10%;
+    z-index:-1 ;
+}
+.feuter-details{
+    opacity: 0;
+    transition: opacity  250ms linear;
+}
+.product{
+    background: radial-gradient(var(--clr-inner, limegreen), 
+    var(--clr-outer, purple));
+    padding: 3em 0;
+    border-radius: 1em;
+    margin-bottom: 5em;
+    text-align: center;
+  
+}
+.product img {
+    margin: -5em 0 0 0 ;
+
+
+}
+
+ @media(min-width:45em){
+    .product img {
+        float:right;
+        width:65%;
+        shape-outside: url(img/shoe-1.png);
+        shape-margin: 1em;
+        margin:  0 -3em 0 0;
+
+    }
+    footer{
+        width: 100%;
+        height: 100px;
+
+    }
+    .product-title{
+      margin-left: 15px;
+      text-align: left;
+       
+    }
+    .product-description{
+        text-align: left;
+        margin-bottom: 9em;
+       
+    }
+}
+
+.product .product-title{
+    font-size:clamp(3rem,calc(5vw + 1rem ),5.5rem);
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 0 0 .2em rgba(#000,.2);
+    text-transform: uppercase;
+}
+.product .product-description {
+    color: white;margin: 5px ;
+
+}
+.hero{
+    --clr-accent:#faa700
+}
+.shoe-red {
+    --clr-inner:#Faa700;
+    --clr-outer:#e48d00;
+    --clr-accent:#af4658;
+}
+.shoe-whit1 {
+    --clr-inner: #fce4b3;
+    --clr-outer: #eac886;
+    --clr-accent: #2f4858;
+}
+.shoe-with2 {
+    --clr-inner: #6dd5ed;
+    --clr-outer: #2193b0;
+    --clr-accent: #008951;
+}
